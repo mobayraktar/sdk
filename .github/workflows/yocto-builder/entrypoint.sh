@@ -17,7 +17,7 @@ LOCAL_CONF_FILE="${BUILD_DIR}/conf/local.conf"
 [ -n "$IMAGE" ] ||
     error "Image to build is not provided."
 
-mkdir -p "$REPOS_DIR"
+mkdir -p "$DL_DIR" "$SSTATE_DIR" "$REPOS_DIR" "$ARTIFACTS_DIR"
 
 vcs import --input "$REPOS_YML_FILE" "$REPOS_DIR"
 

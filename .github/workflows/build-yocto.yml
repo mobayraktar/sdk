@@ -13,10 +13,10 @@ jobs:
       github.event_name == 'workflow_dispatch' || 
       (github.event_name == 'pull_request_target' && github.event.label.name == 'run-workflow')
     env:
-      DL_DIR: /yocto/downloads
-      SSTATE_DIR: /yocto/sstate-cache
-      REPOS_DIR: /repos
-      ARTIFACTS_DIR: /work/artifacts
+      DL_DIR: /home/ci/yocto/downloads
+      SSTATE_DIR: /home/ci/yocto/sstate-cache
+      REPOS_DIR: /home/ci/repos
+      ARTIFACTS_DIR: /home/ci/work/artifacts
     strategy:
       fail-fast: true
       matrix:
