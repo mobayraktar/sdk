@@ -31,7 +31,8 @@ jobs:
 
       - name: Build a yocto-builder Docker image
         run: |
-          docker build "$GITHUB_WORKSPACE/.github/workflows/yocto-builder" -f Dockerfile -t yocto-builder
+          cd "$GITHUB_WORKSPACE/.github/workflows/yocto-builder"
+          docker build -f Dockerfile -t yocto-builder .
 
       - name: Build the image
         run: |
