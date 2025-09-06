@@ -17,6 +17,8 @@ LOCAL_CONF_FILE="${BUILD_DIR}/conf/local.conf"
 [ -n "$IMAGE" ] ||
     error "Image to build is not provided."
 
+mkdir -p "$REPOS_DIR"
+
 vcs import --input "$REPOS_YML_FILE" "$REPOS_DIR"
 
 # shellcheck disable=SC1091
